@@ -1,6 +1,16 @@
-/* make the customizations */
 $theme-colors: (
-    "info": tomato,
-    "danger": teal
+  "primary": #82aaff,
+  "secondary": #c792ea,
+  "success": #a9c77d,
+  "info": #89ddff,
+  "warning": #ffcb6b,
+  "danger": #ff5572,
+  "light": #bfc7d5,
+  "dark": #292d3e,
 );
 
+$custom-colors: (
+    "darker": #13151d,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);

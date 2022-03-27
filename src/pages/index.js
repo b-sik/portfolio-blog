@@ -1,34 +1,27 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
 
-import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Header from "../components/header"
 
-import Button from "react-bootstrap/Button"
-import Container from "react-bootstrap/Container"
-import Col from "react-bootstrap/Col"
-import Row from "react-bootstrap/Row"
+import Hero from "./sections/hero"
+import Work from "./sections/work"
+import Contact from "./sections/contact"
 
-const Index = ({ data, location }) => {
+const Index = ({ data }) => {
   const siteTitle =
     data.site.siteMetadata?.title || `Brian Siklinski - Web Developer`
 
+  const navHeight = "50px"
+
   return (
-    <Layout location={location} title={siteTitle}>
+    <div className="global-wrapper" data-is-root-path={true}>
       <Seo />
-      <Container>
-        <Row>
-          <Col xs={6}>
-            <p>
-              No blog posts found. Add markdown posts to "content/blog" (or the
-              directory you specified for the "gatsby-source-filesystem" plugin
-              in gatsby-config.js).
-            </p>
-            <Button variant="info">Button!</Button>
-          </Col>
-        </Row>
-      </Container>
-    </Layout>
+      <Header navHeight={navHeight} />
+      <Hero navHeight={navHeight} />
+      <Work />
+      <Contact />
+    </div>
   )
 }
 export default Index
