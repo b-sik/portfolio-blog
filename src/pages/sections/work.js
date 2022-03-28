@@ -1,11 +1,38 @@
 import React, { useState } from "react"
+import { handleKeyDown } from "../../helpers"
 
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 const Work = () => {
-  const [workItem, setWorkItem] = useState("work-item-1")
+  const [workItem, setWorkItem] = useState("work-item-0")
+
+  const workItems = [
+    "custom WordPress themes",
+    "custom WordPress plugins",
+    "other work",
+  ]
+
+  const workItemComponents = workItems => {
+    return workItems.map((item, i) => {
+      return (
+        <li
+          // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
+          role="button"
+          id={`work-item-${i}`}
+          tabIndex={0}
+          className={`h4 ${
+            workItem === `work-item-${i}` ? "selected-work-item" : ""
+          }`}
+          onClick={e => setWorkItem(e.target.id)}
+          onKeyDown={e => handleKeyDown(e, setWorkItem, e.target.id)}
+        >
+          {item}
+        </li>
+      )
+    })
+  }
 
   return (
     <section
@@ -23,33 +50,7 @@ const Work = () => {
         <Row className="flex-grow-1">
           <Col xs={5} className="d-flex border-end border-secondary">
             <ul className="d-flex flex-column flex-grow-1 justify-content-around text-primary">
-              <li
-                id="work-item-1"
-                className={`h4 ${
-                  workItem === "work-item-1" ? "selected-work-item" : ""
-                }`}
-                onClick={e => setWorkItem(e.target.id)}
-              >
-                custom WordPress themes
-              </li>
-              <li
-                id="work-item-2"
-                className={`h4 ${
-                  workItem === "work-item-2" ? "selected-work-item" : ""
-                }`}
-                onClick={e => setWorkItem(e.target.id)}
-              >
-                custom WordPress plugins
-              </li>
-              <li
-                id="work-item-3"
-                className={`h4 ${
-                  workItem === "work-item-3" ? "selected-work-item" : ""
-                }`}
-                onClick={e => setWorkItem(e.target.id)}
-              >
-                other work
-              </li>
+              {workItemComponents(workItems)}
             </ul>
           </Col>
           <Col xs={7}></Col>
