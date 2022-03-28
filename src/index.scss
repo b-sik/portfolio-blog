@@ -28,7 +28,7 @@ body {
 
 li {
   list-style-type: square;
-  
+
   &::marker {
     color: var(--bs-danger);
   }
@@ -46,4 +46,11 @@ li {
   &::marker {
     color: var(--bs-success);
   }
+}
+
+.contact-grid-item {
+    &:hover {
+        color: var(--bs-dark) !important;
+        background-color: var(--bs-light);
+    }
 }

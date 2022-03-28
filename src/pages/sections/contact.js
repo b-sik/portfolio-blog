@@ -27,28 +27,26 @@ const Contact = () => {
           <Col xs={{ span: 5, offset: 1 }} className="d-flex">
             <Container className="flex-grow-1 d-flex flex-column justify-content-center">
               <Row>
-                <Col xs={6} className="border-bottom border-end">
-                  <div className="p-4 text-center text-danger d-flex">
+                <Col xs={6} className="border-bottom border-end p-0">
+                  <div className="contact-grid-item text-center text-danger d-flex">
                     <a
                       href="/"
-                      className="flex-grow-1"
+                      className="p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       <FontAwesomeIcon icon={faEnvelope} size="6x" />
-                      <p>
-                        <span>bszyk.codes</span> <span>@gmail.com</span>
-                      </p>
+                      <p>info@bsik.com</p>
                     </a>
                   </div>
                 </Col>
                 <Col
                   xs={6}
-                  className="border-bottom border-start text-secondary"
+                  className="border-bottom border-start text-secondary p-0"
                 >
-                  <div className="p-4 text-center d-flex">
+                  <div className="contact-grid-item text-center d-flex">
                     <a
                       href="/"
-                      className="flex-grow-1"
+                      className="p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       <FontAwesomeIcon icon={faGithubAlt} size="6x" />
@@ -58,11 +56,11 @@ const Contact = () => {
                 </Col>
               </Row>
               <Row>
-                <Col className="border-top border-end text-info">
-                  <div className="p-4 text-center d-flex">
+                <Col className="border-top border-end text-info p-0">
+                  <div className="text-center d-flex">
                     <a
                       href="/"
-                      className="flex-grow-1"
+                      className="contact-grid-item p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       <FontAwesomeIcon icon={faTwitter} size="6x" />
@@ -70,11 +68,11 @@ const Contact = () => {
                     </a>
                   </div>
                 </Col>
-                <Col className="border-top border-start text-primary">
-                  <div className="p-4 text-center d-flex">
+                <Col className="border-top border-start text-primary p-0">
+                  <div className="text-center d-flex">
                     <a
                       href="/"
-                      className="flex-grow-1"
+                      className="contact-grid-item p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       <FontAwesomeIcon icon={faLinkedin} size="6x" />
