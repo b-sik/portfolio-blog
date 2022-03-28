@@ -1,3 +1,49 @@
-@import "custom";
+$theme-colors: (
+  "primary": #82aaff,
+  "secondary": #c792ea,
+  "success": #a9c77d,
+  "info": #89ddff,
+  "warning": #ffcb6b,
+  "danger": #ff5572,
+  "light": #bfc7d5,
+  "dark": #292d3e,
+);
+
+$custom-colors: (
+  "darker": #13151d,
+);
+
+$theme-colors: map-merge($theme-colors, $custom-colors);
 
 @import "~bootstrap/scss/bootstrap";
+
+*::selection {
+  background: var(--bs-danger);
+}
+
+html,
+body {
+  font-family: $font-family-monospace;
+}
+
+li {
+  list-style-type: square;
+  
+  &::marker {
+    color: var(--bs-danger);
+  }
+  &:hover {
+    cursor: pointer;
+    &:not(.selected-work-item)::marker {
+      color: var(--bs-warning);
+    }
+  }
+}
+
+.selected-work-item {
+  color: var(--bs-info);
+  cursor: pointer;
+  &::marker {
+    color: var(--bs-success);
+  }
+}

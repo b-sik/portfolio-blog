@@ -7,14 +7,16 @@ import Row from "react-bootstrap/Row"
 const Hero = ({ navHeight }) => {
   return (
     <section
-      className="w-100 bg-darker text-warning"
+      className="w-100 bg-darker d-flex align-items-center"
       id="hero"
       style={{ minHeight: `calc(100vh - ${navHeight})` }}
     >
       <Container>
         <Row>
           <Col xs={12}>
-            <h2 className="my-3">Hero Section</h2>
+            <h1 className="my-3 text-primary">brian siklinski</h1>
+            <h2 className="my-3 text-warning">freelance web developer</h2>
+            <p className="text-light">based in beautiful Buffalo, NY, USA</p>
           </Col>
         </Row>
       </Container>
