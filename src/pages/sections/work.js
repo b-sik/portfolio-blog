@@ -23,7 +23,9 @@ const Work = () => {
           id={`work-list-item-${i}`}
           tabIndex={0}
           className={`h4 ${
-            workListItem === `work-list-item-${i}` ? "selected-work-list-item" : ""
+            workListItem === `work-list-item-${i}`
+              ? "selected-work-list-item"
+              : ""
           }`}
           onClick={e => setWorkListItems(e.target.id)}
           onKeyDown={e => handleKeyDown(e, setWorkListItems, e.target.id)}
@@ -32,6 +34,31 @@ const Work = () => {
         </li>
       )
     })
+  }
+
+  const workComponentThemes = (data) => {
+      return <p>{data}</p>
+  }
+
+  const workComponentPlugins = (data) => {
+      return <p>{data}</p>
+  }
+
+  const workComponentOther = (data) => {
+      return <p>{data}</p>
+  }
+
+  const workShowcaseComponent = (workListItem) => {
+      switch (workListItem) {
+          case 'work-list-item-0':
+              return workComponentThemes(workListItem)
+          case 'work-list-item-1':
+              return workComponentPlugins(workListItem)
+          case 'work-list-item-2':
+              return workComponentOther(workListItem)
+          default:
+              break;
+      }
   }
 
   return (
@@ -53,7 +80,12 @@ const Work = () => {
               {workListComponents(workList)}
             </ul>
           </Col>
-          <Col xs={7}></Col>
+          <Col
+            xs={7}
+            className="d-flex justify-content-center align-items-center"
+          >
+            {workShowcaseComponent(workListItem)}
+          </Col>
         </Row>
       </Container>
     </section>
