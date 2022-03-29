@@ -1,7 +1,9 @@
 import React from "react"
 
+import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
+import Form from "react-bootstrap/Form"
 import Row from "react-bootstrap/Row"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -20,10 +22,37 @@ const Contact = () => {
     >
       <Container className="d-flex flex-grow-1">
         <Row className="flex-grow-1">
-          <Col xs={5}>
+          <Col xs={5} className="d-flex flex-column flex-grow-1">
             <h2 className="my-5">contact</h2>
+            <Container className="d-flex flex-column flex-grow-1">
+              <Row className="flex-grow-1">
+                <p className="text-light">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </Row>
+              <Row className="flex-grow-1">
+                <Form>
+                  <Form.Group className="mb-3" controlId="email">
+                    <Form.Label>email</Form.Label>
+                    <Form.Control type="email" placeholder="enter email" />
+                  </Form.Group>
+
+                  <Form.Group className="mb-3" controlId="message">
+                    <Form.Label>message</Form.Label>
+                    <Form.Control as="textarea" rows={3} placeholder="your message..." />
+                  </Form.Group>
+                  <Button variant="primary" type="submit">
+                    send
+                  </Button>
+                </Form>
+              </Row>
+            </Container>
           </Col>
 
+          {/* icon grid */}
           <Col xs={{ span: 5, offset: 1 }} className="d-flex">
             <Container className="flex-grow-1 d-flex flex-column justify-content-center">
               <Row>
