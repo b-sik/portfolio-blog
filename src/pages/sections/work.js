@@ -6,7 +6,7 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 const Work = () => {
-  const [workListItem, setWorkListItems] = useState("work-item-0")
+  const [workListItem, setWorkListItems] = useState("work-list-item-0")
 
   const workList = [
     "custom WordPress themes",
@@ -20,10 +20,10 @@ const Work = () => {
         <li
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
           role="button"
-          id={`work-item-${i}`}
+          id={`work-list-item-${i}`}
           tabIndex={0}
           className={`h4 ${
-            workListItem === `work-item-${i}` ? "selected-work-item" : ""
+            workListItem === `work-list-item-${i}` ? "selected-work-list-item" : ""
           }`}
           onClick={e => setWorkListItems(e.target.id)}
           onKeyDown={e => handleKeyDown(e, setWorkListItems, e.target.id)}
