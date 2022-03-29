@@ -5,8 +5,11 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
+import PluginShowcase from "./work-components/PluginShowcase"
+import ThemeShowcase from "./work-components/ThemeShowcase"
+
 const Work = () => {
-  const [workListItem, setWorkListItems] = useState("work-list-item-0")
+  const [workItem, setWorkItems] = useState("work-item-0")
 
   const workList = [
     "custom WordPress themes",
@@ -20,15 +23,13 @@ const Work = () => {
         <li
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
           role="button"
-          id={`work-list-item-${i}`}
+          id={`work-item-${i}`}
           tabIndex={0}
           className={`h4 ${
-            workListItem === `work-list-item-${i}`
-              ? "selected-work-list-item"
-              : ""
+            workItem === `work-item-${i}` ? "selected-work-item" : ""
           }`}
-          onClick={e => setWorkListItems(e.target.id)}
-          onKeyDown={e => handleKeyDown(e, setWorkListItems, e.target.id)}
+          onClick={e => setWorkItems(e.target.id)}
+          onKeyDown={e => handleKeyDown(e, setWorkItems, e.target.id)}
         >
           {item}
         </li>
@@ -36,29 +37,15 @@ const Work = () => {
     })
   }
 
-  const workComponentThemes = (data) => {
-      return <p>{data}</p>
-  }
-
-  const workComponentPlugins = (data) => {
-      return <p>{data}</p>
-  }
-
-  const workComponentOther = (data) => {
-      return <p>{data}</p>
-  }
-
-  const workShowcaseComponent = (workListItem) => {
-      switch (workListItem) {
-          case 'work-list-item-0':
-              return workComponentThemes(workListItem)
-          case 'work-list-item-1':
-              return workComponentPlugins(workListItem)
-          case 'work-list-item-2':
-              return workComponentOther(workListItem)
-          default:
-              break;
-      }
+  const workShowcaseComponent = workItem => {
+    switch (workItem) {
+      case "work-item-0":
+        return <ThemeShowcase />
+      case "work-item-1":
+        return <PluginShowcase />
+      default:
+        break
+    }
   }
 
   return (
@@ -73,7 +60,10 @@ const Work = () => {
           </Col>
         </Row>
       </Container>
-      <Container className="d-flex flex-column flex-grow-1 mb-5">
+      <Container
+        className="d-flex flex-column flex-grow-1 mb-5"
+        style={{ minHeight: "500px" }}
+      >
         <Row className="flex-grow-1">
           <Col xs={5} className="d-flex border-end border-secondary">
             <ul className="d-flex flex-column flex-grow-1 justify-content-around text-primary">
@@ -84,7 +74,7 @@ const Work = () => {
             xs={7}
             className="d-flex justify-content-center align-items-center"
           >
-            {workShowcaseComponent(workListItem)}
+            {workShowcaseComponent(workItem)}
           </Col>
         </Row>
       </Container>
