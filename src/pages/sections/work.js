@@ -5,6 +5,7 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
+import OtherShowcase from "./work-components/OtherShowcase"
 import PluginShowcase from "./work-components/PluginShowcase"
 import ThemeShowcase from "./work-components/ThemeShowcase"
 
@@ -43,6 +44,8 @@ const Work = () => {
         return <ThemeShowcase />
       case "work-item-1":
         return <PluginShowcase />
+      case "work-item-2":
+        return <OtherShowcase />
       default:
         break
     }

@@ -19,30 +19,26 @@ const PluginShowcase = () => {
             aliquip ex ea commodo consequat.
           </p>
           <hr />
-          <Card style={{ width: "16rem" }} text="dark" border="light" className="p-0 align-self-center">
-            <Card.Body className="bg-light">
-              <Card.Title>Advanced Access for LearnDash</Card.Title>
-              <div className="d-flex">
-                <Card.Text className="h6" style={{ cursor: "default" }}>
-                  &rarr;&nbsp;
-                </Card.Text>
-                <Card.Text className="h6" style={{ cursor: "default" }}>
-                  Customize, set, sell, and limit course access for Learndash.
-                  Includes WooCommerce integration.
-                </Card.Text>
-              </div>
-              <div className="d-flex mt-3 justify-content-center">
-                <Button
-                  className="px-5"
-                  href="https://github.com/bszyk/adv-acc-ld-wc"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  GitHub
-                </Button>
-              </div>
-            </Card.Body>
-          </Card>
+          <Container className="d-flex flex-column text-info text-center">
+            plugins on github:
+            <Button
+              href="https://github.com/bszyk/adv-acc-ld-wc"
+              variant="outline-warning"
+              className="my-3"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Advanced Access for LearnDash
+            </Button>
+            <Button
+              href="https://github.com/bszyk/bszyk-sso"
+              variant="outline-warning"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Custom SSO for WordPress
+            </Button>
+          </Container>
         </Col>
         <Col xs={{ span: 5, offset: 1 }}>
           <Card text="dark" border="light" className="p-0">
