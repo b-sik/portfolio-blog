@@ -11,7 +11,40 @@ const PluginShowcase = () => {
   return (
     <Container className="d-flex flex-column h-100 flex-grow-1">
       <Row className="flex-grow-1 justify-content-around align-items-center">
-        <Col xs={5}>
+        <Col xs={6} className="d-flex flex-column">
+          <p className="text-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <hr />
+          <Card style={{ width: "16rem" }} text="dark" border="light" className="p-0 align-self-center">
+            <Card.Body className="bg-light">
+              <Card.Title>Advanced Access for LearnDash</Card.Title>
+              <div className="d-flex">
+                <Card.Text className="h6" style={{ cursor: "default" }}>
+                  &rarr;&nbsp;
+                </Card.Text>
+                <Card.Text className="h6" style={{ cursor: "default" }}>
+                  Customize, set, sell, and limit course access for Learndash.
+                  Includes WooCommerce integration.
+                </Card.Text>
+              </div>
+              <div className="d-flex mt-3 justify-content-center">
+                <Button
+                  className="px-5"
+                  href="https://github.com/bszyk/adv-acc-ld-wc"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </Button>
+              </div>
+            </Card.Body>
+          </Card>
+        </Col>
+        <Col xs={{ span: 5, offset: 1 }}>
           <Card text="dark" border="light" className="p-0">
             <StaticImage
               className="card-img-top"
@@ -27,17 +60,31 @@ const PluginShowcase = () => {
                   &rarr;&nbsp;
                 </Card.Text>
                 <Card.Text className="h6" style={{ cursor: "default" }}>
-                  A custom WordPress plugin to display dynamic data on the frontend of your site.
+                  A custom WordPress plugin to display dynamic data on the
+                  frontend of your site.
                 </Card.Text>
               </div>
               <div className="d-flex mt-3">
-                <Button className="w-50 me-1">Wordpress</Button>
-                <Button className="w-50 ms-1">GitHub</Button>
+                <Button
+                  className="w-50 me-1"
+                  href="https://wordpress.org/plugins/dynamic-block-content/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Wordpress
+                </Button>
+                <Button
+                  className="w-50 ms-1"
+                  href="https://github.com/bszyk/dynamic-block-content"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </Button>
               </div>
             </Card.Body>
           </Card>
         </Col>
-        <Col xs={7}></Col>
       </Row>
     </Container>
   )

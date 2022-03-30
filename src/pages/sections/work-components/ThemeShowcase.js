@@ -51,18 +51,20 @@ const ThemeShowcase = () => {
               &rarr;&nbsp;
             </Card.Text>
             <Card.Text className="h6" style={{ cursor: "default" }}>
-              Customizable Content Management System tailored to your needs.
+              Content Management System customized and tailored to your needs.
             </Card.Text>
           </Card.Body>
         </Card>
       </Row>
       <hr />
-      <Row className="flex-grow-1 justify-content-center align-items-center">
-        <Col xs={8} className="text-light">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
+      <Row className="flex-grow-1 justify-content-center align-items-start">
+        <Col xs={8}>
+          <p className="text-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
         </Col>
         <Col xs={4} className="d-flex flex-column align-items-center text-info">
           happy clients:
