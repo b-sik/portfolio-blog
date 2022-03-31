@@ -26,6 +26,12 @@ body {
   font-family: $font-family-monospace;
 }
 
+.nav-link {
+  &:hover {
+    color: var(--bs-danger) !important;
+  }
+}
+
 li {
   list-style-type: square;
 
@@ -46,7 +52,6 @@ li {
   &::marker {
     color: var(--bs-success);
     content: "\003E\00A0";
-
   }
 }
 

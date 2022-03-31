@@ -59,12 +59,14 @@ const Contact = () => {
                 <Col xs={6} className="border-bottom border-end p-0">
                   <div className="contact-grid-item text-center text-danger d-flex">
                     <a
-                      href="/"
+                      href="mailto:bszyk.codes@gmail.com"
+                      target="_blank"
+                      rel="noopenner noreferrer"
                       className="p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
                       <FontAwesomeIcon icon={faEnvelope} size="6x" />
-                      <p>info@bsik.com</p>
+                      <p>email</p>
                     </a>
                   </div>
                 </Col>
@@ -74,7 +76,9 @@ const Contact = () => {
                 >
                   <div className="contact-grid-item text-center d-flex">
                     <a
-                      href="/"
+                      href="https://github.com/bszyk"
+                      target="_blank"
+                      rel="noopenner noreferrer"
                       className="p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
@@ -88,7 +92,9 @@ const Contact = () => {
                 <Col className="border-top border-end text-info p-0">
                   <div className="text-center d-flex">
                     <a
-                      href="/"
+                      href="https://twitter.com/b_szyk"
+                      target="_blank"
+                      rel="noopenner noreferrer"
                       className="contact-grid-item p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >
@@ -100,7 +106,9 @@ const Contact = () => {
                 <Col className="border-top border-start text-primary p-0">
                   <div className="text-center d-flex">
                     <a
-                      href="/"
+                      href="https://www.linkedin.com/in/brian-siklinski/"
+                      target="_blank"
+                      rel="noopenner noreferrer"
                       className="contact-grid-item p-4 flex-grow-1"
                       style={{ color: "inherit", textDecoration: "none" }}
                     >

@@ -21,11 +21,22 @@ const ThemeShowcase = () => {
         </Col>
         <Col xs={4} className="d-flex flex-column align-items-center text-info">
           happy clients:
-          <Button href="/" variant="outline-warning" className="my-3">
+          <Button
+            href="http://breathtobody.com"
+            target="_blank"
+            rel="noopenner noreferrer"
+            variant="outline-warning"
+            className="my-3"
+          >
             beathtobody.com
           </Button>
-          <Button href="/" variant="outline-warning">
-            westferry.com
+          <Button
+            href="https://www.westferrymusic.com"
+            target="_blank"
+            rel="noopenner noreferrer"
+            variant="outline-warning"
+          >
+            westferrymusic.com
           </Button>
         </Col>
       </Row>

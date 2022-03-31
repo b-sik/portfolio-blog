@@ -67,7 +67,7 @@ const PluginShowcase = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Wordpress
+                  WordPress
                 </Button>
                 <Button
                   className="w-50 ms-1"
