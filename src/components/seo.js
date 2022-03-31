@@ -43,7 +43,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           property: `og:title`,
-          content: title,
+          content: defaultTitle,
         },
         {
           property: `og:description`,
@@ -84,7 +84,7 @@ Seo.propTypes = {
   description: PropTypes.string,
   lang: PropTypes.string,
   meta: PropTypes.arrayOf(PropTypes.object),
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
 }
 
 export default Seo

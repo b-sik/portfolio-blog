@@ -24,6 +24,7 @@ const Work = () => {
         <li
           // eslint-disable-next-line jsx-a11y/no-noninteractive-element-to-interactive-role
           role="button"
+          key={i}
           id={`work-item-${i}`}
           tabIndex={0}
           className={`h4 ${

@@ -1,12 +1,8 @@
 import React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
-import Button from "react-bootstrap/Button"
-import Card from "react-bootstrap/Card"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import ListGroup from "react-bootstrap/ListGroup"
-import Row from "react-bootstrap/Row"
 
 const PluginShowcase = () => {
   return (

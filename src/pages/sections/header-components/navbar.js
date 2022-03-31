@@ -4,9 +4,8 @@ import Container from "react-bootstrap/Container"
 import Nav from "react-bootstrap/Nav"
 import Navbar from "react-bootstrap/Navbar"
 
-const Header = ({ navHeight }) => {
+const NavBar = ({ navHeight }) => {
   return (
-    <>
       <Navbar bg="dark" variant="dark" className="border-bottom border-secondary" style={{ height: navHeight }}>
         <Container>
           <Nav className="justify-content-end my-3 w-100">
@@ -19,8 +18,7 @@ const Header = ({ navHeight }) => {
           </Nav>
         </Container>
       </Navbar>
-    </>
   )
 }
 
-export default Header
+export default NavBar
