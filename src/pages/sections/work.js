@@ -59,7 +59,7 @@ const Work = () => {
       <Container>
         <Row>
           <Col xs={12}>
-            <h3 className="my-5 text-end">work</h3>
+            <h2 className="my-5 text-end">work</h2>
           </Col>
         </Row>
       </Container>

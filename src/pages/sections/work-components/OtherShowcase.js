@@ -16,15 +16,15 @@ const PluginShowcase = () => {
         className="flex-grow-1 d-flex justify-content-center align-items-center"
       >
         <ListGroup>
-          <ListGroup.Item variant="light">
+          <ListGroup.Item action variant="light">
             &rarr;&nbsp;<strong>Take Your Meds Bot</strong> | ADHD-inspired
             Twitter bot powered by AWS Lambda functions and written with Python.
           </ListGroup.Item>
-          <ListGroup.Item variant="light">
+          <ListGroup.Item action variant="light">
             &rarr;&nbsp;<strong>WP Zip</strong> | Bash script delivered via
             Composer package to prepare a zip archive for a WordPress plugin.
           </ListGroup.Item>
-          <ListGroup.Item variant="light">
+          <ListGroup.Item action variant="light">
             &rarr;&nbsp;<strong>This Website</strong> | Fully static site made
             with Gatsby, React, and Bootstrap.
           </ListGroup.Item>

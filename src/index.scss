@@ -41,16 +41,18 @@ li {
 }
 
 .selected-work-item {
-  color: var(--bs-info);
+  color: var(--bs-danger);
   cursor: pointer;
   &::marker {
     color: var(--bs-success);
+    content: "\003E\00A0";
+
   }
 }
 
 .contact-grid-item {
-    &:hover {
-        color: var(--bs-dark) !important;
-        background-color: var(--bs-info);
-    }
+  &:hover {
+    color: var(--bs-dark) !important;
+    background-color: var(--bs-info);
+  }
 }

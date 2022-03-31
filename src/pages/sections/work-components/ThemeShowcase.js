@@ -10,6 +10,27 @@ import Row from "react-bootstrap/Row"
 const ThemeShowcase = () => {
   return (
     <Container className="d-flex flex-column h-100 flex-grow-1">
+      <Row className="flex-grow-1 justify-content-center align-items-start">
+        <Col xs={8}>
+          <p className="text-light">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </Col>
+        <Col xs={4} className="d-flex flex-column align-items-center text-info">
+          happy clients:
+          <Button href="/" variant="outline-warning" className="my-3">
+            beathtobody.com
+          </Button>
+          <Button href="/" variant="outline-warning">
+            westferry.com
+          </Button>
+        </Col>
+      </Row>
+      <hr />
+
       <Row className="flex-grow-1 justify-content-around align-items-center">
         <Card
           style={{ width: "16rem" }}
@@ -55,26 +76,6 @@ const ThemeShowcase = () => {
             </Card.Text>
           </Card.Body>
         </Card>
-      </Row>
-      <hr />
-      <Row className="flex-grow-1 justify-content-center align-items-start">
-        <Col xs={8}>
-          <p className="text-light">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
-        </Col>
-        <Col xs={4} className="d-flex flex-column align-items-center text-info">
-          happy clients:
-          <Button href="/" variant="outline-warning" className="my-3">
-            beathtobody.com
-          </Button>
-          <Button href="/" variant="outline-warning">
-            westferry.com
-          </Button>
-        </Col>
       </Row>
     </Container>
   )
