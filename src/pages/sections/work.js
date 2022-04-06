@@ -139,38 +139,34 @@ const Work = () => {
         className="d-flex flex-column flex-grow-1 mb-5"
         style={{ minHeight: "500px" }}
       >
-        <Row className="flex-grow-1">
-          <BrowserView>
-            <Col xs={5} className="d-flex border-end border-secondary">
-              <ul className="d-flex flex-column flex-grow-1 justify-content-around text-primary">
-                {workListComponents(workList)}
-              </ul>
-            </Col>
-            <Col
-              xs={7}
-              className="d-flex justify-content-center align-items-center"
-            >
-              <Showcase {...workItemData(workItem)} />
-            </Col>
-          </BrowserView>
-          <MobileView>
-            <Col
-              xs={12}
-              className="d-flex flex-column justify-content-center align-items-center"
-            >
-              {workList.map((item, i) => (
-                <Fragment key={i}>
-                  <h4
-                    className={`text-center ${i === 0 ? "mb-3" : "mb-3 mt-5"}`}
-                  >
-                    {item}
-                  </h4>
-                  <Showcase {...workItemData(`work-item-${i}`)} />
-                </Fragment>
-              ))}
-            </Col>
-          </MobileView>
-        </Row>
+        <BrowserView className="row flex-grow-1">
+          <Col xs={5} className="d-flex border-end border-secondary">
+            <ul className="d-flex flex-column flex-grow-1 justify-content-around text-primary">
+              {workListComponents(workList)}
+            </ul>
+          </Col>
+          <Col
+            xs={7}
+            className="d-flex justify-content-center align-items-center"
+          >
+            <Showcase {...workItemData(workItem)} />
+          </Col>
+        </BrowserView>
+        <MobileView>
+          <Col
+            xs={12}
+            className="d-flex flex-column justify-content-center align-items-center"
+          >
+            {workList.map((item, i) => (
+              <Fragment key={i}>
+                <h4 className={`text-center ${i === 0 ? "mb-3" : "mb-3 mt-5"}`}>
+                  {item}
+                </h4>
+                <Showcase {...workItemData(`work-item-${i}`)} />
+              </Fragment>
+            ))}
+          </Col>
+        </MobileView>
       </Container>
     </section>
   )

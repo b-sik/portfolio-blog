@@ -22,7 +22,7 @@ const Contact = () => {
     >
       <Container className="d-flex flex-grow-1">
         <Row className="flex-grow-1">
-          <Col xs={5} className="d-flex flex-column flex-grow-1">
+          <Col xs={12} lg={5} className="d-flex flex-column flex-grow-1">
             <h2 className="my-5">contact</h2>
             <Container className="d-flex flex-column flex-grow-1">
               <Row className="flex-grow-1">
@@ -33,7 +33,7 @@ const Contact = () => {
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </Row>
-              <Row className="flex-grow-1">
+              <Row className="flex-grow-1 my-5">
                 <Form>
                   <Form.Group className="mb-3" controlId="email">
                     <Form.Label>email</Form.Label>
@@ -42,7 +42,11 @@ const Contact = () => {
 
                   <Form.Group className="mb-3" controlId="message">
                     <Form.Label>message</Form.Label>
-                    <Form.Control as="textarea" rows={3} placeholder="your message..." />
+                    <Form.Control
+                      as="textarea"
+                      rows={3}
+                      placeholder="your message..."
+                    />
                   </Form.Group>
                   <Button variant="primary" type="submit">
                     send
@@ -53,7 +57,7 @@ const Contact = () => {
           </Col>
 
           {/* icon grid */}
-          <Col xs={{ span: 5, offset: 1 }} className="d-flex">
+          <Col xs={12} lg={{ span: 5, offset: 1 }} className="d-flex mb-5 mb-lg-0">
             <Container className="flex-grow-1 d-flex flex-column justify-content-center">
               <Row>
                 <Col xs={6} className="border-bottom border-end p-0">
