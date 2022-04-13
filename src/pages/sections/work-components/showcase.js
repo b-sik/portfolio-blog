@@ -38,13 +38,13 @@ const Showcase = ({ description, items }) => {
                 <ListGroup.Item variant={variants[i]} className="text-dark">
                   <Container>
                     <Row>
-                      <Col xs={12} lg={9}>
+                      <Col xs={12} xl={9}>
                         &rarr;&nbsp;<strong>{item.name}</strong> |{" "}
                         {item.description}
                       </Col>
                       <Col
                         xs={12}
-                        lg={3}
+                        xl={3}
                         className="d-flex flex-column align-items-center justify-content-center"
                       >
                         {item.buttons.map((button, i) => (
@@ -53,7 +53,7 @@ const Showcase = ({ description, items }) => {
                             target="_blank"
                             rel="noopener noreferrer"
                             variant="outline-dark"
-                            className={`w-100 my-2 my-lg-0 ${i > 0 ? "mt-lg-2" : ""}`}
+                            className={`w-100 my-2`}
                           >
                             {button[0]}
                           </Button>

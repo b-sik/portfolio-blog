@@ -25,7 +25,7 @@ const Contact = () => {
           <Col xs={12} lg={5} className="d-flex flex-column flex-grow-1">
             <h2 className="my-5">contact</h2>
             <Container className="d-flex flex-column flex-grow-1">
-              <Row className="flex-grow-1">
+              <Row className="flex-grow-1 align-content-center">
                 <p className="text-light">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -33,7 +33,7 @@ const Contact = () => {
                   laboris nisi ut aliquip ex ea commodo consequat.
                 </p>
               </Row>
-              <Row className="flex-grow-1 my-5">
+              <Row className="flex-grow-1 my-5 align-content-center">
                 <Form>
                   <Form.Group className="mb-3" controlId="email">
                     <Form.Label>email</Form.Label>
