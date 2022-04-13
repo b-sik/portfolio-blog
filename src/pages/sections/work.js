@@ -1,6 +1,5 @@
 import React, { useState, Fragment } from "react"
 import { handleKeyDown } from "../../helpers"
-import { BrowserView, MobileView } from "react-device-detect"
 
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
@@ -55,7 +54,7 @@ const Work = () => {
         className="d-flex flex-column flex-grow-1 mb-5"
         style={{ minHeight: "500px" }}
       >
-        <BrowserView className="row flex-grow-1">
+        <Row className="d-none d-lg-flex flex-grow-1">
           <Col xs={5} className="d-flex border-end border-secondary">
             <ul className="d-flex flex-column flex-grow-1 justify-content-around text-primary">
               {workListComponents(workList)}
@@ -67,8 +66,8 @@ const Work = () => {
           >
             <Showcase {...workItemData(workItem)} />
           </Col>
-        </BrowserView>
-        <MobileView>
+        </Row>
+        <Row className='d-lg-none'>
           <Col
             xs={12}
             className="d-flex flex-column justify-content-center align-items-center"
@@ -82,7 +81,7 @@ const Work = () => {
               </Fragment>
             ))}
           </Col>
-        </MobileView>
+        </Row>
       </Container>
     </section>
   )

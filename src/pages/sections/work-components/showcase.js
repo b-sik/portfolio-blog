@@ -37,7 +37,7 @@ const Showcase = ({ description, items }) => {
               return (
                 <ListGroup.Item variant={variants[i]} className="text-dark">
                   <Container>
-                    <Row>
+                    <Row className="align-items-center">
                       <Col xs={12} xl={9}>
                         &rarr;&nbsp;<strong>{item.name}</strong> |{" "}
                         {item.description}
