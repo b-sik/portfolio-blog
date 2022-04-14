@@ -5,8 +5,8 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
-import Showcase from "./work-components/showcase"
-import workItemData from './work-components/data'
+import Showcase from "../../components/showcase"
+import workItemData from '../../data/work'
 
 const Work = () => {
   const [workItem, setWorkItems] = useState("work-item-0")

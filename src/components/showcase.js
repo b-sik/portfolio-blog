@@ -1,5 +1,5 @@
 import React from "react"
-import { shuffleArray } from "../../../helpers"
+import { shuffleArray } from "../helpers"
 
 import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"

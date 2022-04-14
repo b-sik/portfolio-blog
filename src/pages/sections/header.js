@@ -1,7 +1,7 @@
 import React from "react"
 
-import Hero from "./header-components/hero"
-import NavBar from "./header-components/navbar"
+import Hero from "../../components/hero"
+import NavBar from "../../components/navbar"
 
 const Header = () => {
   const navHeight = "50px"
