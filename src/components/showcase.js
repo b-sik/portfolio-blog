@@ -33,11 +33,9 @@ const Showcase = ({ description, items }) => {
           className="flex-grow-1 d-flex justify-content-center align-items-start"
         >
           <ListGroup>
-            <ListGroup.Item
-              variant={variants[variants.length - 1]}
-              className="text-center text-dark"
-            >
-              examples of work</ListGroup.Item>
+            <ListGroup.Item className="text-center text-light border border-light bg-dark">
+              examples of work
+            </ListGroup.Item>
             {Object.values(items).map((item, i) => {
               return (
                 <ListGroup.Item
