@@ -4,7 +4,7 @@ const workItemData = workItem => {
       return {
         title: "custom WordPress themes",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "A WordPress theme is what turns your data and content into the website that people see. I can create a custom theme for your small business, personal project, band, or whatever you do.",
         items: {
           breathtobody: {
             name: "Breath To Body",
@@ -24,7 +24,7 @@ const workItemData = workItem => {
       return {
         title: "custom WordPress plugins",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "A WordPress plugin changes the function of WordPress itself and/or other plugins. Need to do something special but can't figure out how? I can build it for you.",
         items: {
           dynamiccontent: {
             name: "Dynamic Content",
@@ -56,7 +56,7 @@ const workItemData = workItem => {
       return {
         title: "other work",
         description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+          "Not limited to WordPress, I'm skilled in React and happy to take up whatever challenge approaches.",
         items: {
           dynamiccontent: {
             name: "Take Your Meds Bot",

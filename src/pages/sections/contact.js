@@ -27,10 +27,7 @@ const Contact = () => {
             <Container className="d-flex flex-column flex-grow-1">
               <Row className="flex-grow-1 align-content-center">
                 <p className="text-light">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                  Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                  laboris nisi ut aliquip ex ea commodo consequat.
+                  Please reach out to me if you are looking for a professional web developer to create a modern website or application for you.
                 </p>
               </Row>
               <Row className="flex-grow-1 my-5 align-content-center">
