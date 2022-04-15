@@ -58,7 +58,7 @@ const Contact = () => {
                       placeholder="your message"
                     />
                   </Form.Group>
-                  <Button variant="primary" type="submit">
+                  <Button name="submit" variant="primary" type="submit">
                     send
                   </Button>
                 </form>
