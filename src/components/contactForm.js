@@ -12,75 +12,42 @@ const ContactForm = () => {
       action="/thanks"
       honeypotName="bot-field"
       onSuccess={(response, context) => {
-        console.log("Successfully sent form data to Netlify Server")
         context.formRef.current.reset()
       }}
     >
       {({ handleChange, success, error }) => (
         <>
           <Honeypot />
-          {success && <p>Thanks for contacting us!</p>}
-          {error && (
-            <p>
-              Sorry, we could not reach servers. Because it only works on
-              Netlify, our GitHub demo does not provide a response.
-            </p>
-          )}
-          <div>
-            <label htmlFor="name">Name:</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
+          {success && <p className="text-success">🎉 sent!</p>}
+          {error && <p className="text-danger">😕 something went wrong</p>}
+          <Form.Group className="mb-3" controlId="email">
+            <Form.Label htmlFor="name">email</Form.Label>
+            <Form.Control
+              name="email"
+              id="email"
               onChange={handleChange}
-              sx={{ variant: "forms.input" }}
+              placeholder="your email..."
             />
-          </div>
-          <div>
-            <label htmlFor="message">Message:</label>
-            <textarea
-              type="text"
+          </Form.Group>
+          <Form.Group className="mb-3" controlId="message">
+            <label htmlFor="message">message</label>
+            <Form.Control
+              as="textarea"
               name="message"
               id="message"
               rows="4"
               onChange={handleChange}
+              placeholder="your message..."
             />
-          </div>
+          </Form.Group>
           <div>
-            <button type="submit">Submit</button>
-            <button type="reset">Reset</button>
+            <Button type="submit" variant="primary">
+              submit
+            </Button>
           </div>
         </>
       )}
     </NetlifyForm>
-    //   <form
-    //   name="contact"
-    //   method="post"
-    //   data-netlify="true"
-    //   data-netlify-honeypot="bot-field"
-    // >
-    //   <Form.Group className="mb-3" controlId="email">
-    //     <Form.Label>email</Form.Label>
-    //     <Form.Control
-    //       name="email"
-    //       type="email"
-    //       placeholder="your email"
-    //     />
-    //   </Form.Group>
-
-    //   <Form.Group className="mb-3" controlId="message">
-    //     <Form.Label>message</Form.Label>
-    //     <Form.Control
-    //       name="message"
-    //       as="textarea"
-    //       rows={3}
-    //       placeholder="your message"
-    //     />
-    //   </Form.Group>
-    //   <Button name="submit" variant="primary" type="submit">
-    //     send
-    //   </Button>
-    // </form>
   )
 }
 
