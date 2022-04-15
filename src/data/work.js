@@ -4,7 +4,7 @@ const workItemData = workItem => {
       return {
         title: "custom WordPress themes",
         description:
-          "A WordPress theme is what turns your data and content into the website that people see. I can create a custom theme for your small business, personal project, band, or whatever you do.",
+          "A WordPress theme is what turns your data and content into the website that people see. I can create a fully mobile-friendly and responsive custom theme for your small business, personal project, band, or whatever you do.",
         items: {
           breathtobody: {
             name: "Breath To Body",
