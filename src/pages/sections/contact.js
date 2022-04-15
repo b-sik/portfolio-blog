@@ -34,7 +34,12 @@ const Contact = () => {
                 </p>
               </Row>
               <Row className="flex-grow-1 my-5 align-content-center">
-                <form name="contact" netlify>
+                <form
+                  name="contact"
+                  method="post"
+                  data-netlify="true"
+                  data-netlify-honeypot="bot-field"
+                >
                   <Form.Group className="mb-3" controlId="email">
                     <Form.Label>email</Form.Label>
                     <Form.Control type="email" placeholder="your email" />
@@ -57,7 +62,11 @@ const Contact = () => {
           </Col>
 
           {/* icon grid */}
-          <Col xs={12} lg={{ span: 5, offset: 1 }} className="d-flex mb-5 mb-lg-0">
+          <Col
+            xs={12}
+            lg={{ span: 5, offset: 1 }}
+            className="d-flex mb-5 mb-lg-0"
+          >
             <Container className="flex-grow-1 d-flex flex-column justify-content-center">
               <Row>
                 <Col xs={6} className="border-bottom border-end p-0">
