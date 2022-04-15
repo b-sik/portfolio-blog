@@ -34,7 +34,7 @@ const Contact = () => {
                 </p>
               </Row>
               <Row className="flex-grow-1 my-5 align-content-center">
-                <Form netlify>
+                <form name="contact" netlify>
                   <Form.Group className="mb-3" controlId="email">
                     <Form.Label>email</Form.Label>
                     <Form.Control type="email" placeholder="your email" />
@@ -51,7 +51,7 @@ const Contact = () => {
                   <Button variant="primary" type="submit">
                     send
                   </Button>
-                </Form>
+                </form>
               </Row>
             </Container>
           </Col>
