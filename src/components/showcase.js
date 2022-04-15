@@ -35,7 +35,11 @@ const Showcase = ({ description, items }) => {
           <ListGroup>
             {Object.values(items).map((item, i) => {
               return (
-                <ListGroup.Item variant={variants[i]} className="text-dark">
+                <ListGroup.Item
+                  key={i}
+                  variant={variants[i]}
+                  className="text-dark"
+                >
                   <Container>
                     <Row className="align-items-center">
                       <Col xs={12} xl={9}>
@@ -49,6 +53,7 @@ const Showcase = ({ description, items }) => {
                       >
                         {item.buttons.map((button, i) => (
                           <Button
+                            key={i}
                             href={button[1]}
                             target="_blank"
                             rel="noopener noreferrer"
