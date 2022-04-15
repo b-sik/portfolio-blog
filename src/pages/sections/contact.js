@@ -1,9 +1,7 @@
 import React from "react"
 
-import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
-import Form from "react-bootstrap/Form"
 import Row from "react-bootstrap/Row"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -13,6 +11,8 @@ import {
   faTwitter,
   faLinkedin,
 } from "@fortawesome/free-brands-svg-icons"
+
+import ContactForm from "../../components/contactForm"
 
 const Contact = () => {
   return (
@@ -34,34 +34,7 @@ const Contact = () => {
                 </p>
               </Row>
               <Row className="flex-grow-1 my-5 align-content-center">
-                <form
-                  name="contact"
-                  method="post"
-                  data-netlify="true"
-                  data-netlify-honeypot="bot-field"
-                >
-                  <Form.Group className="mb-3" controlId="email">
-                    <Form.Label>email</Form.Label>
-                    <Form.Control
-                      name="email"
-                      type="email"
-                      placeholder="your email"
-                    />
-                  </Form.Group>
-
-                  <Form.Group className="mb-3" controlId="message">
-                    <Form.Label>message</Form.Label>
-                    <Form.Control
-                      name="message"
-                      as="textarea"
-                      rows={3}
-                      placeholder="your message"
-                    />
-                  </Form.Group>
-                  <Button name="submit" variant="primary" type="submit">
-                    send
-                  </Button>
-                </form>
+                <ContactForm />
               </Row>
             </Container>
           </Col>
