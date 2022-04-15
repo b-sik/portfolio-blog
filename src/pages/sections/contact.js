@@ -42,12 +42,17 @@ const Contact = () => {
                 >
                   <Form.Group className="mb-3" controlId="email">
                     <Form.Label>email</Form.Label>
-                    <Form.Control type="email" placeholder="your email" />
+                    <Form.Control
+                      name="email"
+                      type="email"
+                      placeholder="your email"
+                    />
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="message">
                     <Form.Label>message</Form.Label>
                     <Form.Control
+                      name="message"
                       as="textarea"
                       rows={3}
                       placeholder="your message"
