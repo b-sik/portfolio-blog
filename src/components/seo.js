@@ -23,6 +23,9 @@ const Seo = ({ description, lang, meta, title }) => {
             }
           }
         }
+        file(name: { eq: "duotone" }) {
+          publicURL
+        }
       }
     `
   )
@@ -68,6 +71,10 @@ const Seo = ({ description, lang, meta, title }) => {
         {
           name: `twitter:description`,
           content: metaDescription,
+        },
+        {
+          name: `twitter:image`,
+          content: site.publicURL,
         },
       ].concat(meta)}
     />
