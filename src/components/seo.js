@@ -18,6 +18,7 @@ const Seo = ({ description, lang, meta, title }) => {
           siteMetadata {
             title
             description
+            siteUrl
             social {
               twitter
             }
@@ -32,6 +33,7 @@ const Seo = ({ description, lang, meta, title }) => {
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
+  const { siteUrl } = site.siteMetadata
 
   return (
     <Helmet
@@ -74,7 +76,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: file.publicURL,
+          content: `${siteUrl}${file.publicURL}`,
         },
       ].concat(meta)}
     />
