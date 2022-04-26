@@ -5,8 +5,8 @@ module.exports = {
       name: `Brian Siklinski`,
       summary: `freelance web developer`,
     },
-    description: `Freelance web developer - modern & responsive WordPress and static websites, and more.`,
-    siteUrl: `https://bszyk.dev/`,
+    description: `Freelance web developer - modern & responsive websites and applications.`,
+    siteUrl: `https://bsik.dev/`,
     social: {
       twitter: `b_szyk`,
     },
@@ -128,7 +128,6 @@ module.exports = {
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // `gatsby-plugin-offline`,
-    'gatsby-plugin-social-cards',
     `gatsby-plugin-sass`,
     `gatsby-plugin-netlify`
   ],
