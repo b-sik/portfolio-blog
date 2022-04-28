@@ -47,7 +47,7 @@ const Contact = () => {
                 <Col xs={6} className="border-bottom border-end p-0">
                   <div className="contact-grid-item text-center text-danger d-flex">
                     <a
-                      href="mailto:bszyk.codes@gmail.com"
+                      href="mailto:info@bsik.dev"
                       target="_blank"
                       rel="noopenner noreferrer"
                       className="p-4 flex-grow-1"
