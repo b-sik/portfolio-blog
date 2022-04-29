@@ -24,12 +24,21 @@ const Seo = ({ description, lang, meta, title }) => {
             }
           }
         }
-        file(name: { eq: "duotone" }) {
-          publicURL
+        file(name: { eq: "hero" }) {
+          childImageSharp {
+            id
+            gatsbyImageData(
+              transformOptions: {
+                duotone: { highlight: "#c792ea", shadow: "#292d3e" }
+              }
+            )
+          }
         }
       }
     `
   )
+
+  const imageSrc = file.childImageSharp.gatsbyImageData.images.fallback.src
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
@@ -76,7 +85,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: `${siteUrl}${file.publicURL}`,
+          content: `${siteUrl}${imageSrc}`,
         },
       ].concat(meta)}
     />

@@ -7,22 +7,28 @@ import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
 const Hero = ({ navHeight }) => {
-  const {
-    file: { publicURL },
-  } = useStaticQuery(
+  const { file } = useStaticQuery(
     graphql`
       query {
-        file(name: { eq: "duotone" }) {
-          id
-          publicURL
+        file(name: { eq: "hero" }) {
+          childImageSharp {
+            id
+            gatsbyImageData(
+              transformOptions: {
+                duotone: { highlight: "#c792ea", shadow: "#292d3e" }
+              }
+            )
+          }
         }
       }
     `
   )
 
+  const imageSrc = file.childImageSharp.gatsbyImageData.images.fallback.src
+
   return (
     <ParallaxProvider>
-      <ParallaxBanner layers={[{ image: publicURL, speed: -15 }]}>
+      <ParallaxBanner layers={[{ image: imageSrc, speed: -15 }]}>
         <section
           className="w-100 bg-darker d-flex align-items-center"
           id="hero"

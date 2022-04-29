@@ -114,14 +114,14 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Brian Siklinski - Web Developer`,
-        short_name: `BSikDev`,
+        short_name: `bsik.dev`,
         start_url: `/`,
-        background_color: `#ffffff`,
+        background_color: `#c792ea`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
         // theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/duotone.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/hero.jpg`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-react-helmet`,
