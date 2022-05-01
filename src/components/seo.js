@@ -11,7 +11,7 @@ import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 const Seo = ({ description, lang, meta, title }) => {
-  const { site, file } = useStaticQuery(
+  const { site, twitterImg, fbImg } = useStaticQuery(
     graphql`
       query {
         site {
@@ -24,21 +24,15 @@ const Seo = ({ description, lang, meta, title }) => {
             }
           }
         }
-        file(name: { eq: "hero" }) {
-          childImageSharp {
-            id
-            gatsbyImageData(
-              transformOptions: {
-                duotone: { highlight: "#c792ea", shadow: "#292d3e" }
-              }
-            )
-          }
+        twitterImg: file(name: { eq: "twitter-img" }) {
+          publicURL
+        }
+        fbImg: file(name: { eq: "fb-img" }) {
+          publicURL
         }
       }
     `
   )
-
-  const imageSrc = file.childImageSharp.gatsbyImageData.images.fallback.src
 
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
@@ -58,6 +52,14 @@ const Seo = ({ description, lang, meta, title }) => {
         {
           property: `og:title`,
           content: defaultTitle,
+        },
+        {
+          property: `og:url`,
+          content: siteUrl,
+        },
+        {
+          property: `og:image`,
+          content: fbImg.publicURL,
         },
         {
           property: `og:description`,
@@ -85,7 +87,7 @@ const Seo = ({ description, lang, meta, title }) => {
         },
         {
           name: `twitter:image`,
-          content: `${siteUrl}${imageSrc}`,
+          content: `${siteUrl}${twitterImg.publicURL}`,
         },
       ].concat(meta)}
     />
