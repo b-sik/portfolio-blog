@@ -1,11 +1,12 @@
 import React from "react"
-import { shuffleArray } from "../helpers"
 
 import Button from "react-bootstrap/Button"
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import ListGroup from "react-bootstrap/ListGroup"
 import Row from "react-bootstrap/Row"
+
+import { shuffleArray } from "../helpers"
 
 const Showcase = ({ description, items }) => {
   const variants = shuffleArray([

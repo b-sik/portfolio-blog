@@ -6,8 +6,8 @@ import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
 import Row from "react-bootstrap/Row"
 
-const Hero = ({ navHeight }) => {
-  const { file } = useStaticQuery(
+const Hero = () => {
+  const { file, site } = useStaticQuery(
     graphql`
       query {
         file(name: { eq: "hero" }) {
@@ -20,11 +20,19 @@ const Hero = ({ navHeight }) => {
             )
           }
         }
+        site {
+          siteMetadata {
+            siteConfig {
+              navHeight
+            }
+          }
+        }
       }
     `
   )
 
   const imageSrc = file.childImageSharp.gatsbyImageData.images.fallback.src
+  const { navHeight } = site.siteMetadata.siteConfig
 
   return (
     <ParallaxProvider>

@@ -10,6 +10,9 @@ module.exports = {
     social: {
       twitter: `b_szyk`,
     },
+    siteConfig: {
+      navHeight: '50px'
+    }
   },
   plugins: [
     `gatsby-plugin-image`,

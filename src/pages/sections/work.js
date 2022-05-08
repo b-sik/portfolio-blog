@@ -1,5 +1,4 @@
 import React, { useState, Fragment } from "react"
-import { handleKeyDown } from "../../helpers"
 
 import Container from "react-bootstrap/Container"
 import Col from "react-bootstrap/Col"
@@ -7,6 +6,8 @@ import Row from "react-bootstrap/Row"
 
 import Showcase from "../../components/showcase"
 import workItemData from '../../data/work'
+
+import { handleKeyDown } from "../../helpers"
 
 const Work = () => {
   const [workItem, setWorkItems] = useState("work-item-0")
@@ -26,7 +27,7 @@ const Work = () => {
           key={i}
           id={`work-item-${i}`}
           tabIndex={0}
-          className={`h4 ${
+          className={`h4 li-square ${
             workItem === `work-item-${i}` ? "selected-work-item" : ""
           }`}
           onClick={e => setWorkItems(e.target.id)}

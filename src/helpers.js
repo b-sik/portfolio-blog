@@ -18,12 +18,23 @@ export const handleKeyDown = (e, cb, arg = null) => {
 
 /**
  * Shuffle array.
- * @param {array} array 
+ * @param {array} array
+ * @returns {array}
  */
-export const shuffleArray= (array) => {
+export const shuffleArray = array => {
   for (let i = array.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [array[i], array[j]] = [array[j], array[i]];
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[array[i], array[j]] = [array[j], array[i]]
   }
-  return array;
+  return array
+}
+
+/**
+ * Check if current page is part of blog.
+ * @param {string} location
+ * @returns {boolean}
+ */
+export const isBlog = location => {
+  return location?.pathname === "/blog" ||
+    location?.pathname.split("/")[1] === "blog"
 }
