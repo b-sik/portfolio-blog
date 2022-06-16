@@ -33,7 +33,7 @@ const BlogIndex = ({ data, location }) => {
     <div className="global-wrapper-blog bg-darker text-light" title={siteTitle}>
       <NavBar navHeight={navHeight} location={location} />
       <Seo title="All posts" />
-      <Container className="py-4 position-relative">
+      <Container className="py-4 position-relative vh-100">
         <Row>
           <Col xs={12} md={10}>
             <ol>
@@ -42,10 +42,7 @@ const BlogIndex = ({ data, location }) => {
 
                 return (
                   <li key={post.fields.slug} className="my-5 li-blog">
-                    <article
-                      itemScope
-                      itemType="http://schema.org/Article"
-                    >
+                    <article itemScope itemType="http://schema.org/Article">
                       <header>
                         <h2>
                           <Link to={`/blog${post.fields.slug}`} itemProp="url">
@@ -53,7 +50,7 @@ const BlogIndex = ({ data, location }) => {
                           </Link>
                         </h2>
                         <small className="text-light">
-                          {post.frontmatter.date}
+                          <em>{post.frontmatter.date}</em>
                         </small>
                       </header>
                       <section>

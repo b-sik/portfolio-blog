@@ -14,13 +14,16 @@ const BlogPostTemplate = ({ data, location }) => {
   const { navHeight } = data.site.siteMetadata?.siteConfig
 
   return (
-    <div className="global-wrapper-blog-post" title={siteTitle}>
+    <div
+      className="global-wrapper-blog-post bg-darker text-light min-vh-100"
+      title={siteTitle}
+    >
       <NavBar navHeight={navHeight} location={location} />
       <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
-      <Container className="my-5">
+      <Container className="py-5">
         <article
           className="blog-post"
           itemScope
@@ -28,7 +31,9 @@ const BlogPostTemplate = ({ data, location }) => {
         >
           <header>
             <h1 itemProp="headline">{post.frontmatter.title}</h1>
-            <p>{post.frontmatter.date}</p>
+            <p>
+              <em>{post.frontmatter.date}</em>
+            </p>
           </header>
           <section
             dangerouslySetInnerHTML={{ __html: post.html }}
