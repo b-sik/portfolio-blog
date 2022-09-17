@@ -6,6 +6,12 @@ const workItemData = workItem => {
         description:
           "A WordPress theme is what turns your data and content into the website that people see. I can create a fully mobile-friendly and responsive custom theme for your small business, personal project, band, or whatever you do.",
         items: {
+          wheeliebabes: {
+            name: "Wheelie Babes",
+            description:
+              "Created a blog that uses GPX location data and OpenStreetMaps to keep track of a cross-country bicycle trip.",
+            buttons: [["visit site", "http://bsik.site/wheelie-babes"]],
+          },
           breathtobody: {
             name: "Breath To Body",
             description:
