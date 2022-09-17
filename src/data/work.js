@@ -12,17 +12,17 @@ const workItemData = workItem => {
               "Created a blog that uses GPX location data and OpenStreetMaps to keep track of a cross-country bicycle trip.",
             buttons: [["visit site", "http://bsik.site/wheelie-babes"]],
           },
-          breathtobody: {
-            name: "Breath To Body",
-            description:
-              "Rehabbed a bloated WordPress site with a custom theme and easy-to-update Content Management System.",
-            buttons: [["visit site", "http://breathtobody.com"]],
-          },
           westferry: {
             name: "West Ferry",
             description:
               "Created a central hub for this band to show off their work, run a blog, and archive their shows and albums.",
             buttons: [["visit site", "https://westferrymusic.com"]],
+          },
+          breathtobody: {
+            name: "Breath To Body",
+            description:
+              "Rehabbed a bloated WordPress site with a custom theme and easy-to-update Content Management System.",
+            buttons: [["visit site", "http://breathtobody.com"]],
           },
         },
       }
@@ -82,7 +82,7 @@ const workItemData = workItem => {
           sso: {
             name: "This Website",
             description:
-              "Fully static custom site made with Gatsby, React, and Bootstrap.",
+              "From-scratch portfolio made with Gatsby, React, and Bootstrap.",
             buttons: [["github", "https://github.com/bszyk/portfolio-blog"]],
           },
         },
