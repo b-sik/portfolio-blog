@@ -35,7 +35,7 @@ const NavBar = ({ location }) => {
     <Navbar
       bg="dark"
       variant="dark"
-      className="border-bottom border-secondary"
+      className={`border-bottom border-secondary ${isBlog(location) ? "sticky-top" : ""}`}
       style={{ height: navHeight }}
     >
       <Container>
