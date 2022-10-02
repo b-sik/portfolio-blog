@@ -6,17 +6,23 @@ const workItemData = workItem => {
         description:
           "A WordPress theme is what turns your data and content into the website that people see. I can create a fully mobile-friendly and responsive custom theme for your small business, personal project, band, or whatever you do.",
         items: {
-          breathtobody: {
-            name: "Breath To Body",
+          wheeliebabes: {
+            name: "Wheelie Babes",
             description:
-              "Rehabbed a bloated WordPress site with a custom theme and easy-to-update Content Management System.",
-            buttons: [["visit site", "http://breathtobody.com"]],
+              "Created a blog that uses GPX location data and OpenStreetMaps to keep track of a cross-country bicycle trip.",
+            buttons: [["visit site", "http://bsik.site/wheelie-babes"]],
           },
           westferry: {
             name: "West Ferry",
             description:
               "Created a central hub for this band to show off their work, run a blog, and archive their shows and albums.",
             buttons: [["visit site", "https://westferrymusic.com"]],
+          },
+          breathtobody: {
+            name: "Breath To Body",
+            description:
+              "Rehabbed a bloated WordPress site with a custom theme and easy-to-update Content Management System.",
+            buttons: [["visit site", "http://breathtobody.com"]],
           },
         },
       }
@@ -76,7 +82,7 @@ const workItemData = workItem => {
           sso: {
             name: "This Website",
             description:
-              "Fully static custom site made with Gatsby, React, and Bootstrap.",
+              "From-scratch portfolio made with Gatsby, React, and Bootstrap.",
             buttons: [["github", "https://github.com/bszyk/portfolio-blog"]],
           },
         },
