@@ -5,6 +5,8 @@ import Container from "react-bootstrap/Container"
 
 import Seo from "../components/seo"
 import NavBar from "../components/navbar"
+import BlogMobileFooter from "../components/blogMobileFooter"
+import IconList from "../components/iconList"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -68,7 +70,9 @@ const BlogPostTemplate = ({ data, location }) => {
             </li>
           </ul>
         </nav>
+        <IconList type="fixed" size="2xl" />
       </Container>
+      <BlogMobileFooter />
     </div>
   )
 }
