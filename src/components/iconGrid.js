@@ -7,21 +7,22 @@ import Row from "react-bootstrap/Row"
 import contactIcons from "../data/contact-icons"
 
 const IconGrid = () => {
-  const icons = contactIcons("6x");
+  const icons = contactIcons("6x")
 
   return (
-      <Col xs={12} lg={{ span: 5, offset: 1 }} className="d-flex mb-5 mb-lg-0">
-        <Container className="flex-grow-1 d-flex flex-column justify-content-center">
-          <Row>
-            {Object.values(icons).map((data, i) => {
-              const { label, icon, url, color, border } = data
+    <Col xs={12} lg={{ span: 5, offset: 1 }} className="d-flex mb-5 mb-lg-0">
+      <Container className="flex-grow-1 d-flex flex-column justify-content-center">
+        <Row>
+          {Object.values(icons).map((data, i) => {
+            const { label, icon, url, color, border } = data
 
-              return (
-                <Col
-                  xs={6}
-                  className={`border-${border[0]} border-${border[1]} p-0`}
-                  key={i}
-                >
+            return (
+              <Col
+                xs={6}
+                className={`border-${border[0]} border-${border[1]} p-0`}
+                key={i}
+              >
+                {label.length > 0 ? (
                   <div className={`text-center text-${color} d-flex`}>
                     <a
                       href={url}
@@ -34,12 +35,13 @@ const IconGrid = () => {
                       <p>{label}</p>
                     </a>
                   </div>
-                </Col>
-              )
-            })}
-          </Row>
-        </Container>
-      </Col>
+                ) : null}
+              </Col>
+            )
+          })}
+        </Row>
+      </Container>
+    </Col>
   )
 }
 

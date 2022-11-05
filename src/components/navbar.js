@@ -61,14 +61,14 @@ const NavBar = ({ location }) => {
                 contact
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item>
+            {/* <Nav.Item>
               <Nav.Link
                 href="/blog"
                 className={`${isBlog(location) ? "text-danger" : "text-light"}`}
               >
                 blog
               </Nav.Link>
-            </Nav.Item>
+            </Nav.Item> */}
           </div>
         </Nav>
       </Container>

@@ -23,10 +23,10 @@ const contactIcons = size => ({
     color: 'secondary',
     border: ['bottom', 'start']
   },
-  twitter: {
-    label: "twitter",
-    icon: <FontAwesomeIcon icon={faTwitter} size={size} />,
-    url: 'https://twitter.com/b_szyk',
+  empty: {
+    label: "",
+    icon: '',
+    url: '',
     color: 'info',
     border: ['top', 'end']
   },
