@@ -12,7 +12,7 @@ const contactIcons = size => ({
   email: {
     label: "email",
     icon: <FontAwesomeIcon icon={faEnvelope} size={size} />,
-    url: 'mailto:bszyk.codes@gmail.com',
+    url: 'mailto:b.siklinski@gmail.com',
     color: 'danger',
     border: ['bottom', 'end']
   },
