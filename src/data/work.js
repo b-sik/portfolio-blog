@@ -64,22 +64,13 @@ const workItemData = workItem => {
         description:
           "Not limited to WordPress, I'm skilled in React and happy to take up whatever challenge approaches.",
         items: {
-          dynamiccontent: {
-            name: "Take Your Meds Bot",
-            description:
-              "ADHD-inspired Twitter bot powered by AWS Lambda functions and written with Python.",
-            buttons: [
-              ["twitter", "https://twitter.com/takeyourmedsbot"],
-              ["github", "https://github.com/bszyk/twitter-bots"],
-            ],
-          },
-          advacc: {
+          zipwp: {
             name: "Zip WP",
             description:
               "Bash script delivered via Composer package to prepare a zip archive for a WordPress plugin.",
             buttons: [["github", "http://github.com/bszyk/bszyk-zip-wp"]],
           },
-          sso: {
+          bsikdev: {
             name: "This Website",
             description:
               "From-scratch portfolio made with Gatsby, React, and Bootstrap.",
