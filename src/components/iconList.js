@@ -13,7 +13,8 @@ const IconList = ({ type, size }) => {
             right: "0",
             transform: "translate(-50%, -50%)",
           },
-          ulClass: "d-none d-md-flex flex-column position-fixed align-items-center",
+          ulClass:
+            "d-none d-md-flex flex-column position-fixed align-items-center",
           liClass: "mt-3",
         }
       case "footer":
@@ -21,7 +22,8 @@ const IconList = ({ type, size }) => {
           ulStyle: {
             listStyle: "none",
           },
-          ulClass: "w-100 d-flex align-items-center justify-content-between p-0 m-0",
+          ulClass:
+            "w-100 d-flex align-items-center justify-content-between p-0 m-0",
           liClass: "",
         }
       default:
@@ -34,10 +36,12 @@ const IconList = ({ type, size }) => {
   return (
     <ul style={ulStyle} className={ulClass}>
       {Object.values(contactIcons(size)).map((data, i) => {
-        const { icon, url, color } = data
+        const { icon, url, color, label } = data
+
+        if (label.length === 0) return
 
         return (
-          <li className={i === 0 ? "" : liClass}>
+          <li className={i === 0 ? "" : liClass} key={i}>
             <a className={`text-${color}`} href={url} rel="noopener noreferrer">
               {icon}
             </a>
