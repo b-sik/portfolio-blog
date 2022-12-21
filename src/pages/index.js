@@ -9,6 +9,7 @@ import Contact from "./sections/contact"
 const Index = () => {
   return (
     <div className="global-wrapper" data-is-root-path={true}>
+      <a rel="me" className="d-none" href="https://hachyderm.io/@brain_sik">Mastodon</a>
       <Seo />
       <Header />
       <Work />
