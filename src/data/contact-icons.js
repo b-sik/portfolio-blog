@@ -19,7 +19,7 @@ const contactIcons = size => ({
   github: {
     label: "github",
     icon: <FontAwesomeIcon icon={faGithubAlt} size={size} />,
-    url: 'https://github.com/bszyk',
+    url: 'https://github.com/b-sik',
     color: 'secondary',
     border: ['bottom', 'start']
   },
