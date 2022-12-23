@@ -4,8 +4,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons"
 import {
   faGithubAlt,
-  faTwitter,
   faLinkedin,
+  faMastodon
 } from "@fortawesome/free-brands-svg-icons"
 
 const contactIcons = size => ({
@@ -24,9 +24,9 @@ const contactIcons = size => ({
     border: ['bottom', 'start']
   },
   empty: {
-    label: "",
-    icon: '',
-    url: '',
+    label: "mastodon",
+    icon: <FontAwesomeIcon icon={faMastodon} size={size} />,
+    url: 'https://hachyderm.io/@brain_sik',
     color: 'info',
     border: ['top', 'end']
   },
