@@ -26,7 +26,7 @@ const contactIcons = size => ({
   empty: {
     label: "mastodon",
     icon: <FontAwesomeIcon icon={faMastodon} size={size} />,
-    url: 'https://hachyderm.io/@brain_sik',
+    url: 'https://masto.ai/@bsik',
     color: 'info',
     border: ['top', 'end']
   },
