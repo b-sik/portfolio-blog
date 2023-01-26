@@ -39,7 +39,7 @@ const workItemData = workItem => {
             buttons: [
               [
                 "wordpress",
-                "http://breathtobody.comhttps://wordpress.org/plugins/dynamic-block-content/",
+                "https://wordpress.org/plugins/dynamic-block-content/",
               ],
               ["github", "https://github.com/bszyk/dynamic-block-content"],
             ],
