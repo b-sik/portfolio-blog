@@ -41,20 +41,20 @@ const workItemData = workItem => {
                 "wordpress",
                 "https://wordpress.org/plugins/dynamic-block-content/",
               ],
-              ["github", "https://github.com/bszyk/dynamic-block-content"],
+              ["github", "https://github.com/b-sik/dynamic-block-content"],
             ],
           },
           advacc: {
             name: "Advanced Access for LearnDash",
             description:
               "A plugin for LearnDash which adds functionality to control access to courses, including creating a digital WooCommerce access pass.",
-            buttons: [["github", "http://github.com/bszyk/adv-acc-ld-wc"]],
+            buttons: [["github", "http://github.com/b-sik/adv-acc-ld-wc"]],
           },
           sso: {
             name: "Custom SSO for WordPress",
             description:
               "A custom SSO for WordPress utilizing JWT Auth tokens.",
-            buttons: [["github", "https://wordpress.org/plugins/bszyk-sso"]],
+            buttons: [["github", "https://github.com/b-sik/bszyk-sso"]],
           },
         },
       }
@@ -68,13 +68,13 @@ const workItemData = workItem => {
             name: "Zip WP",
             description:
               "Bash script delivered via Composer package to prepare a zip archive for a WordPress plugin.",
-            buttons: [["github", "http://github.com/bszyk/bszyk-zip-wp"]],
+            buttons: [["github", "http://github.com/b-sik/bszyk-zip-wp"]],
           },
           bsikdev: {
             name: "This Website",
             description:
               "From-scratch portfolio made with Gatsby, React, and Bootstrap.",
-            buttons: [["github", "https://github.com/bszyk/portfolio-blog"]],
+            buttons: [["github", "https://github.com/b-sik/portfolio-blog"]],
           },
         },
       }
