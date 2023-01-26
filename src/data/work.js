@@ -68,7 +68,7 @@ const workItemData = workItem => {
             name: "Zip WP",
             description:
               "Bash script delivered via Composer package to prepare a zip archive for a WordPress plugin.",
-            buttons: [["github", "http://github.com/b-sik/bszyk-zip-wp"]],
+            buttons: [["github", "http://github.com/b-sik/zip-wp"]],
           },
           bsikdev: {
             name: "This Website",
