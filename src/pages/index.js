@@ -9,7 +9,7 @@ import Contact from "./sections/contact"
 const Index = () => {
   return (
     <div className="global-wrapper" data-is-root-path={true}>
-      <a rel="me" class="d-none" href="https://indieweb.social/@bsik234">Mastodon</a>
+      <a rel="me" class="d-none" href="https://mstdn.social/@bsik">Mastodon</a>
       <Seo />
       <Header />
       <Work />

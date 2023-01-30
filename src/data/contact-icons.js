@@ -26,7 +26,7 @@ const contactIcons = size => ({
   empty: {
     label: "mastodon",
     icon: <FontAwesomeIcon icon={faMastodon} size={size} />,
-    url: 'https://indieweb.social/@bsik234',
+    url: 'https://mstdn.social/@bsik',
     color: 'info',
     border: ['top', 'end']
   },

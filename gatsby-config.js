@@ -3,13 +3,10 @@ module.exports = {
     title: `Brian Siklinski - Web Developer`,
     author: {
       name: `Brian Siklinski`,
-      summary: `freelance web developer`,
+      summary: `web developer`,
     },
-    description: `Freelance web developer - modern & responsive websites and applications.`,
+    description: `web developer - modern & responsive websites and applications.`,
     siteUrl: `https://bsik.dev/`,
-    social: {
-      twitter: `b_szyk`,
-    },
     siteConfig: {
       navHeight: '50px'
     }
@@ -64,12 +61,6 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
     {
       resolve: `gatsby-plugin-feed`,
       options: {

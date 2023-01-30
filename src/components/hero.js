@@ -48,14 +48,14 @@ const Hero = () => {
             <Row>
               <Col xs={12}>
                 <h1 className="my-3 text-primary">brian siklinski</h1>
-                <h2 className="my-3 text-warning">freelance web developer</h2>
+                <h2 className="my-3 text-warning">web developer</h2>
                 <p className="text-light mb-1 small">
                   <span className="d-none d-sm-inline-block">&rarr;&nbsp;</span>
                   React, JavaScript, PHP, WordPress, and more
                 </p>
                 <p className="text-light small">
                   <span className="d-none d-sm-inline-block">&rarr;&nbsp;</span>
-                  based in Buffalo, NY and Toronto, ON
+                  based in Buffalo, NY
                 </p>
               </Col>
             </Row>

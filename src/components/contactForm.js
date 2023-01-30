@@ -26,7 +26,6 @@ const ContactForm = () => {
               name="email"
               id="email"
               onChange={handleChange}
-              placeholder="your email..."
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="message">
@@ -37,7 +36,6 @@ const ContactForm = () => {
               id="message"
               rows="4"
               onChange={handleChange}
-              placeholder="your message..."
             />
           </Form.Group>
           <div>
