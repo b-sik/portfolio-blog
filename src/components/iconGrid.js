@@ -11,7 +11,7 @@ const IconGrid = () => {
 
   return (
     <Col xs={12} lg={{ span: 5, offset: 1 }} className="d-flex mb-5 mb-lg-0">
-      <Container className="flex-grow-1 d-flex flex-column justify-content-center">
+      <Container className="flex-grow-1 d-flex flex-column justify-content-center align-items-center">
         <Row>
           {Object.values(icons).map((data, i) => {
             const { label, icon, url, color, border } = data
@@ -40,6 +40,13 @@ const IconGrid = () => {
             )
           })}
         </Row>
+        <a
+          className="btn btn-warning mt-5 w-75"
+          href="./Brian Siklinski - Resume.pdf"
+          target="_blank"
+        >
+          Download Resume
+        </a>
       </Container>
     </Col>
   )
