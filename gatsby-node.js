@@ -117,7 +117,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 exports.onCreateDevServer = ({ app }) => {
-  app.get("/", async function (req, res, next) {
+  app.get("*", async function (req, res, next) {
     try {
       const response = await axios.post(
         "http://68.183.113.10:3000/visitor-log",
