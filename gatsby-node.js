@@ -1,5 +1,7 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const crypto = require("crypto")
+const axios = require("axios")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -112,4 +114,29 @@ exports.createSchemaCustomization = ({ actions }) => {
       slug: String
     }
   `)
+}
+
+exports.onCreateDevServer = ({ app }) => {
+  app.get("/", async function (req, res, next) {
+    try {
+      const response = await axios.post(
+        "http://68.183.113.10:3000/visitor-log",
+        {
+          uid: crypto.randomBytes(16).toString("hex"),
+          ip_addr: req.ip,
+          timestamp: new Date(),
+        },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+
+      console.log(response.data)
+      next();
+    } catch (error) {
+      next(error)
+    }
+  })
 }
