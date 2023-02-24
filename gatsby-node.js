@@ -117,6 +117,16 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 
 exports.onCreateDevServer = ({ app }) => {
+  app.use(function (req, res, next) {
+    res.header(`Access-Control-Allow-Origin`, `http://68.183.113.10:3000`)
+    res.header(`Access-Control-Allow-Credentials`, true)
+    res.header(
+      `Access-Control-Allow-Headers`,
+      `Origin, X-Requested-With, Content-Type, Accept`
+    )
+    next()
+  })
+
   app.get("*", async function (req, res, next) {
     try {
       const response = await axios.post(
@@ -129,12 +139,13 @@ exports.onCreateDevServer = ({ app }) => {
         {
           headers: {
             "Content-Type": "application/json",
+            "Accept": "application/json"
           },
         }
       )
 
       console.log(response.data)
-      next();
+      next()
     } catch (error) {
       next(error)
     }
