@@ -27,16 +27,11 @@ const Index = () => {
 export default Index
 
 const logVisitor = async () => {
-  const res = await axios
-    .get(`.netlify/functions/visitorLog-background`)
+  await axios
+    .post(`https://bsik.dev/visitorLog`, { clientIp: await getClientIp() })
     .catch(err => console.log(err))
-
-  console.log(res)
 }
 
-// const getClientIp = async () => {
-//   await publicIpv4({
-//     fallbackUrls: ["https://ifconfig.co/ip"],
-//     timeout: 3000,
-//   })
-// }
+const getClientIp = async () => {
+  await axios.get("https://api.ipify.org?format=json")
+}

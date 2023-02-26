@@ -16,6 +16,8 @@ export default async function visitorLogPOST(req, res) {
     origin: req.headers.host,
   }
 
+  console.log(data)
+
   try {
     const result = await axios
       .post(url, data, {
