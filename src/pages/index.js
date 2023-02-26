@@ -8,9 +8,9 @@ import Work from "./sections/work"
 import Contact from "./sections/contact"
 
 const Index = () => {
-  // useEffect(() => {
-  //   logVisitor()
-  // }, [])
+  useEffect(() => {
+    logVisitor()
+  }, [])
 
   return (
     <div className="global-wrapper" data-is-root-path={true}>
@@ -27,11 +27,11 @@ const Index = () => {
 export default Index
 
 const logVisitor = async () => {
-  // await axios.post(`https://bsik.dev/api/visitorLog`, {
-  //   clientIp: await getClientIp(),
-  // })
-  const res = await axios.get('https://geolocation-db.com/json/')
-  console.log(res.data);
+  const res = await axios
+    .get(`.netlify/functions/visitorLog-background`)
+    .catch(err => console.log(err))
+
+  console.log(res)
 }
 
 // const getClientIp = async () => {
