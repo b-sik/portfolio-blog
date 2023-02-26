@@ -8,9 +8,9 @@ import Work from "./sections/work"
 import Contact from "./sections/contact"
 
 const Index = () => {
-  useEffect(() => {
-    logVisitor()
-  }, [])
+  // useEffect(() => {
+  //   logVisitor()
+  // }, [])
 
   return (
     <div className="global-wrapper" data-is-root-path={true}>
