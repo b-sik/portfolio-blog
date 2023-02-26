@@ -22,12 +22,10 @@ export default async function visitorLogPOST(req, res) {
       })
       .then(postRes => {
         console.log("Axios POST: " + postRes.status)
-        return res.status(postRes.status).send(
-          JSON.stringify({
-            status: postRes.status,
-            message: postRes.statusText,
-          })
-        )
+        return res.status(postRes.status).json({
+          status: postRes.status,
+          message: postRes.statusText,
+        })
       })
   } catch (error) {
     res.status(500).send(error)
