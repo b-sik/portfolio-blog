@@ -16,6 +16,7 @@ export default async function visitorLogPOST(req, res) {
     uid: crypto.randomBytes(16).toString("hex"),
     ip_addr: clientIp,
     timestamp: new Date(),
+    origin: req.headers.host
   }
 
   try {
