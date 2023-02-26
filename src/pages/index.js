@@ -1,16 +1,13 @@
 import React, { useEffect } from "react"
 import axios from "axios"
-import Seo from "../components/seo"
+import { publicIpv4 } from "public-ip"
 
+import Seo from "../components/seo"
 import Header from "./sections/header"
 import Work from "./sections/work"
 import Contact from "./sections/contact"
 
 const Index = () => {
-  const logVisitor = async () => {
-    const { data } = await axios.get(`https://bsik.dev/api/visitorLog`)
-  }
-
   useEffect(() => {
     logVisitor()
   }, [])
@@ -28,3 +25,15 @@ const Index = () => {
   )
 }
 export default Index
+
+const logVisitor = async () => {
+  await axios.post(`https://bsik.dev/api/visitorLog`, {
+    clientIp: await getClientIp(),
+  })
+}
+
+const getClientIp = async () =>
+  await publicIpv4({
+    fallbackUrls: ["https://ifconfig.co/ip"],
+    timeout: 3000,
+  })
