@@ -28,7 +28,7 @@ export default Index
 
 const logVisitor = async () => {
   await axios
-    .post(`https://bsik.dev/visitorLog`, { clientIp: await getClientIp() })
+    .post(`https://bsik.dev/api/visitorLog`, { clientIp: await getClientIp() })
     .catch(err => console.log(err))
 }
 
