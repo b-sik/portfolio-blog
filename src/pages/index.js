@@ -32,8 +32,9 @@ const logVisitor = async () => {
   })
 }
 
-const getClientIp = async () =>
+const getClientIp = async () => {
   await publicIpv4({
     fallbackUrls: ["https://ifconfig.co/ip"],
     timeout: 3000,
   })
+}

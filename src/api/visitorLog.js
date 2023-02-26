@@ -1,5 +1,5 @@
 import axios from "axios"
-import crypto from "crypto"
+import { nanoid } from "nanoid"
 
 export default async function visitorLogPOST(req, res) {
   const url = "http://68.183.113.10:3000/visitor-log"
@@ -10,10 +10,10 @@ export default async function visitorLogPOST(req, res) {
   }
 
   const data = {
-    uid: crypto.randomBytes(16).toString("hex"),
+    uid: nanoid(16),
     ip_addr: req.body.clientIp,
     timestamp: new Date(),
-    origin: req.headers.host
+    origin: req.headers.host,
   }
 
   try {
