@@ -1,5 +1,5 @@
-import axios from "axios"
-import { nanoid } from "nanoid"
+const axios = require("axios")
+const { nanoid } = require("nanoid")
 
 export default async function visitorLogPOST(req, res) {
   const url = "http://68.183.113.10:3000/visitor-log"
