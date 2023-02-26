@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import axios from "axios"
-import { publicIpv4 } from "public-ip"
+// import { publicIpv4 } from "public-ip"
 
 import Seo from "../components/seo"
 import Header from "./sections/header"
@@ -27,29 +27,16 @@ const Index = () => {
 export default Index
 
 const logVisitor = async () => {
-  await axios
-    .post(`https://bsik.dev/api/visitorLog`, {
-      clientIp: await getClientIp(),
-    })
-    .catch(function (error) {
-      if (error.response) {
-        // Request made and server responded
-        console.log(error.response.data)
-        console.log(error.response.status)
-        console.log(error.response.headers)
-      } else if (error.request) {
-        // The request was made but no response was received
-        console.log(error.request)
-      } else {
-        // Something happened in setting up the request that triggered an Error
-        console.log("Error", error.message)
-      }
-    })
+  // await axios.post(`https://bsik.dev/api/visitorLog`, {
+  //   clientIp: await getClientIp(),
+  // })
+  const res = await axios.get('https://geolocation-db.com/json/')
+  console.log(res.data);
 }
 
-const getClientIp = async () => {
-  await publicIpv4({
-    fallbackUrls: ["https://ifconfig.co/ip"],
-    timeout: 3000,
-  })
-}
+// const getClientIp = async () => {
+//   await publicIpv4({
+//     fallbackUrls: ["https://ifconfig.co/ip"],
+//     timeout: 3000,
+//   })
+// }
