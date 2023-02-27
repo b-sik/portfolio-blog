@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Brian Siklinski - Web Developer`,
@@ -8,8 +12,8 @@ module.exports = {
     description: `web developer - modern & responsive websites and applications.`,
     siteUrl: `https://bsik.dev/`,
     siteConfig: {
-      navHeight: '50px'
-    }
+      navHeight: "50px",
+    },
   },
   plugins: [
     {

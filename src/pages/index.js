@@ -1,6 +1,7 @@
 import React, { useEffect } from "react"
 import axios from "axios"
 // import { publicIpv4 } from "public-ip"
+import { handleAxiosError } from "../helpers"
 
 import Seo from "../components/seo"
 import Header from "./sections/header"
@@ -28,12 +29,12 @@ export default Index
 
 const logVisitor = async () => {
   await axios
-    .post(`https://bsik.dev/api/visitorLog`, { clientIp: await getClientIp() })
-    .catch(err => console.log(err))
+    .post(`${process.env.GATSBY_HOSTNAME}/api/visitorLog`, { clientIp: await getClientIp() })
+    .catch(error => handleAxiosError(error))
 }
 
 const getClientIp = async () => {
   return await axios
     .get("https://api.ipify.org?format=json")
-    .catch(err => console.log(err))
+    .catch(error => handleAxiosError(error))
 }

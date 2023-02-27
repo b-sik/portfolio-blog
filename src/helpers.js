@@ -38,3 +38,22 @@ export const isBlog = location => {
   return location?.pathname === "/blog" ||
     location?.pathname.split("/")[1] === "blog"
 }
+
+/**
+ * Handle axios error.
+ * @param {object} error
+ */
+export function handleAxiosError (error) {
+  if (error.response) {
+    // Request made and server responded
+    console.error(error.response.data)
+    console.error(error.response.status)
+    console.error(error.response.headers)
+  } else if (error.request) {
+    // The request was made but no response was received
+    console.error(error.request)
+  } else {
+    // Something happened in setting up the request that triggered an Error
+    console.error("Error", error.message)
+  }
+}

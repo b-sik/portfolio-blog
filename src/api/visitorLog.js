@@ -2,7 +2,7 @@ const axios = require("axios")
 const { nanoid } = require("nanoid")
 
 export default async function visitorLogPOST(req, res) {
-  const url = "http://68.183.113.10:3000/visitor-log"
+  const url = `${process.env.BSIK_SERVER}/visitor-log`
 
   const headers = {
     "Content-Type": "application/json",
@@ -14,6 +14,10 @@ export default async function visitorLogPOST(req, res) {
     ip_addr: req.body?.clientIp?.data?.ip,
     timestamp: new Date(),
     origin: req.headers.host,
+  }
+
+  if (typeof data.ip_addr === 'undefined' ) {
+    return;
   }
 
   try {
