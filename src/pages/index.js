@@ -33,5 +33,7 @@ const logVisitor = async () => {
 }
 
 const getClientIp = async () => {
-  await axios.get("https://api.ipify.org?format=json")
+  return await axios
+    .get("https://api.ipify.org?format=json")
+    .catch(err => console.log(err))
 }

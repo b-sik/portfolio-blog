@@ -11,12 +11,10 @@ export default async function visitorLogPOST(req, res) {
 
   const data = {
     uid: nanoid(16),
-    ip_addr: req.body.clientIp,
+    ip_addr: req.body?.clientIp?.data?.ip,
     timestamp: new Date(),
     origin: req.headers.host,
   }
-
-  console.log(data)
 
   try {
     const result = await axios
