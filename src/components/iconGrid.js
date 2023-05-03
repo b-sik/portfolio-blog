@@ -40,13 +40,6 @@ const IconGrid = () => {
             )
           })}
         </Row>
-        <a
-          className="btn btn-warning mt-5 w-75"
-          href="./Brian Siklinski - Resume.pdf"
-          target="_blank"
-        >
-          Download Resume
-        </a>
       </Container>
     </Col>
   )
